@@ -1,7 +1,7 @@
 console.log("main loaded");
 timerVar = setInterval(timer, 10);
 var multiplier, amount, totalPixels;
-var workers = ["CreativeSushi", "sam", "StarLord", "WeatherGeek", "Benji", "MM4005", "Scruffy", "Sarah.Oswin"];
+var workers = ["CreativeSushi", "sam", "StarLord", "WeatherGeek", "Benji", "MM4005", "Scruffy", "Sarah.Oswin", "Shearsquid", "LuminousKnight", "Llama_taco", "Fluffyn"];
 var owned = {
     CreativeSushi: 0
     , sam: 0
@@ -11,6 +11,10 @@ var owned = {
     , MM4005: 0
     , Scruffy: 0
     , 'Sarah.Oswin': 0
+    , Shearsquid: 0
+    , LuminousKnight: 0
+    , Fluffyn: 0
+    , Llama_taco: 0
 }
 var cost = {
     CreativeSushi: 1000000
@@ -21,6 +25,10 @@ var cost = {
     , MM4005: 1000
     , Scruffy: 10000000
     , 'Sarah.Oswin': 25000
+    , Shearsquid: 50000
+    , LuminousKnight: 100
+    , Fluffyn: 250000
+    , Llama_taco: 750000
 }
 multiplier = 1;
 amount = checkCookie('amount');
@@ -28,6 +36,18 @@ totalPixels = checkCookie('pixels');
 var ownedString = getCookie('owned');
 if (ownedString != "") {
     owned = JSON.parse(ownedString);
+    var x = workers.length;
+    while (x > 0) {
+        x = x - 1;
+        worker = workers[x];
+        console.log(worker);
+        checkObj = owned[worker];
+        console.log(checkObj);
+        if (checkObj === undefined) {
+            console.log("consider it undefined")
+            owned[worker] = 0;
+        }
+    }
     loadOwned();
 }
 console.log(totalPixels);
