@@ -4,6 +4,8 @@ var multiplier, amount, totalPixels;
 var owned = {
     CreativeSushi: 0
     , sam: 0
+    , StarLord: 0
+    , WeatherGeek: 0
 }
 console.log(owned.CreativeSushi, owned.sam)
 multiplier = 1;
