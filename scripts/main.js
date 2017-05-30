@@ -81,7 +81,7 @@ function loadOwned() {
     while (x > 0) {
         worker = workers[x];
         var id = worker + "Own";
-        console.log(owned[worker]);
+        console.log(worker);
         document.getElementById(id).innerHTML = owned[worker];
         x = x - 1;
     }
