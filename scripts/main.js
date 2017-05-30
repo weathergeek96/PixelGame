@@ -79,10 +79,10 @@ function buttonColor() {
 function loadOwned() {
     var x = workers.length;
     while (x > 0) {
-        x = x - 1;
         worker = workers[x];
         var id = worker + "Own";
         console.log(owned[worker]);
         document.getElementById(id).innerHTML = owned[worker];
+        x = x - 1;
     }
 }
