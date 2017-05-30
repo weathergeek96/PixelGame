@@ -3,6 +3,8 @@ function updateGUI() {
     buttonColor();
     setCookie('amount', amount);
     setCookie('pixels', totalPixels);
+    var ownedString = JSON.stringify(owned);
+    setCookie('owned', ownedString);
     document.getElementById('amount').innerHTML = amount;
     //setCookie('own', owned);
 }

@@ -21,6 +21,10 @@ var cost = {
 multiplier = 1;
 amount = checkCookie('amount');
 totalPixels = checkCookie('pixels');
+var ownedString = getCookie('owned');
+if (ownedString != "") {
+    owned = JSON.parse(ownedString);
+}
 console.log(totalPixels);
 
 function timer() {
