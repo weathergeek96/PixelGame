@@ -1,7 +1,7 @@
 console.log("main loaded");
 timerVar = setInterval(timer, 10);
 var multiplier, amount, totalPixels;
-var workers = ["CreativeSushi", "sam", "StarLord", "WeatherGeek", "Benji", "MM4005"];
+var workers = ["CreativeSushi", "sam", "StarLord", "WeatherGeek", "Benji", "MM4005", "Scruffy", "Sarah.Oswin"];
 var owned = {
     CreativeSushi: 0
     , sam: 0
@@ -9,6 +9,8 @@ var owned = {
     , WeatherGeek: 0
     , Benji: 0
     , MM4005: 0
+    , Scruffy: 0
+    , 'Sarah.Oswin': 0
 }
 var cost = {
     CreativeSushi: 1000000
@@ -17,6 +19,8 @@ var cost = {
     , WeatherGeek: 500000
     , Benji: 100000
     , MM4005: 1000
+    , Scruffy: 10000000
+    , 'Sarah.Oswin': 25000
 }
 multiplier = 1;
 amount = checkCookie('amount');
