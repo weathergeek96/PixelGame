@@ -1,6 +1,7 @@
 console.log("main loaded");
 timerVar = setInterval(timer, 10);
 var multiplier, amount, totalPixels;
+var workers = ["CreativeSushi", "sam", "StarLord", "WeatherGeek", "Benji", "MM4005"];
 var owned = {
     CreativeSushi: 0
     , sam: 0
@@ -8,6 +9,14 @@ var owned = {
     , WeatherGeek: 0
     , Benji: 0
     , MM4005: 0
+}
+var cost = {
+    CreativeSushi: 1000000
+    , sam: 2500
+    , StarLord: 25
+    , WeatherGeek: 500000
+    , Benji: 100000
+    , MM4005: 1000
 }
 multiplier = 1;
 amount = 0;
@@ -56,4 +65,18 @@ function getCookie(cname) {
         }
     }
     return "";
+}
+
+function buttonColor() {
+    var x = workers.length;
+    while (x > 0) {
+        x = x - 1;
+        worker = workers[x];
+        if (cost[worker] > totalPixels) {
+            document.getElementById(worker).className = "btn btn-danger";
+        }
+        else {
+            document.getElementById(worker).className = "btn btn-success";
+        }
+    }
 }
