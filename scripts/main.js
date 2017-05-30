@@ -21,6 +21,7 @@ var cost = {
 multiplier = 1;
 amount = checkCookie('amount');
 totalPixels = checkCookie('pixels');
+updateOwnedGUI(CreativeSushi);
 console.log(totalPixels);
 
 function timer() {
