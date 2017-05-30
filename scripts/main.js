@@ -6,6 +6,8 @@ var owned = {
     , sam: 0
     , StarLord: 0
     , WeatherGeek: 0
+    , Benji: 0
+    , MM4005: 0
 }
 console.log(owned.CreativeSushi, owned.sam)
 multiplier = 1;
