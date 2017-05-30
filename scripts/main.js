@@ -19,29 +19,9 @@ var cost = {
     , MM4005: 1000
 }
 multiplier = 1;
-amount = 0;
-totalPixels = 0;
-/*
 amount = getCookie('amount');
 totalPixels = getCookie('pixels');
-owned = getCookie('owned');
-if (amount === "") {
-    amount = 0;
-}
-if (totalPixels === "") {
-    totalPixels = 0;
-}
-if (owned === "") {
-    owned = {
-        CreativeSushi: 0
-        , sam: 0
-        , StarLord: 0
-        , WeatherGeek: 0
-        , Benji: 0
-        , MM4005: 0
-    }
-}
-*/
+
 function timer() {
     totalPixels = totalPixels + (amount * multiplier / 100);
     updateGUI();
@@ -64,7 +44,7 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-    return "";
+    return "0";
 }
 
 function buttonColor() {

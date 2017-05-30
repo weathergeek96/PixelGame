@@ -1,9 +1,9 @@
 function updateGUI() {
     document.getElementById("pixels").innerHTML = String(totalPixels.toFixed(0));
     buttonColor();
-    /*setCookie('amount', amount);
+    setCookie('amount', amount);
     setCookie('pixels', totalPixels);
-    setCookie('own', owned);*/
+    //setCookie('own', owned);
 }
 
 function updateOwnedGUI(item) {
