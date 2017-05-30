@@ -50,7 +50,7 @@ function getCookie(cname) {
 function checkCookie(cname) {
     var x = getCookie(cname);
     if (x != "") {
-        return x;
+        return parseInt(x);
     }
     else {
         return 0;
