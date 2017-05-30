@@ -12,9 +12,10 @@ var owned = {
 multiplier = 1;
 amount = 0;
 totalPixels = 0;
-amount = start('amount');
-totalPixels = start('pixels');
-owned = start('owned');
+/*
+amount = getCookie('amount');
+totalPixels = getCookie('pixels');
+owned = getCookie('owned');
 if (amount === "") {
     amount = 0;
 }
@@ -31,7 +32,7 @@ if (owned === "") {
         , MM4005: 0
     }
 }
-
+*/
 function timer() {
     totalPixels = totalPixels + (amount * multiplier / 100);
     updateGUI();
