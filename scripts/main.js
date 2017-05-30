@@ -21,6 +21,7 @@ var cost = {
 multiplier = 1;
 amount = getCookie('amount');
 totalPixels = getCookie('pixels');
+console.log(totalPixels);
 
 function timer() {
     totalPixels = totalPixels + (amount * multiplier / 100);
