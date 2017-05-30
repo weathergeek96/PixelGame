@@ -19,8 +19,8 @@ var cost = {
     , MM4005: 1000
 }
 multiplier = 1;
-amount = getCookie('amount');
-totalPixels = getCookie('pixels');
+amount = checkCookie('amount');
+totalPixels = checkCookie('pixels');
 console.log(totalPixels);
 
 function timer() {
@@ -44,7 +44,17 @@ function getCookie(cname) {
             return c.substring(name.length, c.length);
         }
     }
-    return 0;
+    return "";
+}
+
+function checkCookie(cname) {
+    var x = getCookie(cname);
+    if (x != "") {
+        return x;
+    }
+    else {
+        return 0;
+    }
 }
 
 function buttonColor() {
