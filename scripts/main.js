@@ -82,7 +82,7 @@ function loadOwned() {
         x = x - 1;
         worker = workers[x];
         var id = worker + "Own";
-        console.log(owned[item]);
-        document.getElementById(id).innerHTML = owned[item];
+        console.log(owned[worker]);
+        document.getElementById(id).innerHTML = owned[worker];
     }
 }
