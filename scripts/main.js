@@ -24,6 +24,7 @@ totalPixels = checkCookie('pixels');
 var ownedString = getCookie('owned');
 if (ownedString != "") {
     owned = JSON.parse(ownedString);
+    loadOwned();
 }
 console.log(totalPixels);
 
@@ -72,5 +73,16 @@ function buttonColor() {
         else {
             document.getElementById(worker).className = "btn btn-success";
         }
+    }
+}
+
+function loadOwned() {
+    var x = workers.length;
+    while (x > 0) {
+        x = x - 1;
+        worker = workers[x];
+        var id = worker + "Own";
+        console.log(owned[item]);
+        document.getElementById(id).innerHTML = owned[item];
     }
 }
