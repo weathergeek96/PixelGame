@@ -1,7 +1,7 @@
 console.log("main loaded");
 timerVar = setInterval(timer, 10);
 var multiplier, amount, totalPixels;
-var workers = ["CreativeSushi", "sam", "StarLord", "WeatherGeek", "Benji", "MM4005", "Scruffy", "Sarah.Oswin", "Shearsquid", "LuminousKnight", "Llama_taco", "Fluffyn"];
+var workers = ["CreativeSushi", "sam", "StarLord", "WeatherGeek", "Benji", "MM4005", "Scruffy", "Sarah.Oswin", "Shearsquid", "LuminousKnight", "Fluffyn", "Llamataco"];
 var owned = {
     CreativeSushi: 0
     , sam: 0
@@ -14,7 +14,7 @@ var owned = {
     , Shearsquid: 0
     , LuminousKnight: 0
     , Fluffyn: 0
-    , Llama_taco: 0
+    , Llamataco: 0
 };
 var cost = {
     CreativeSushi: 1000000
@@ -28,7 +28,7 @@ var cost = {
     , Shearsquid: 50000
     , LuminousKnight: 100
     , Fluffyn: 250000
-    , Llama_taco: 750000
+    , Llamataco: 750000
 };
 var powerUpCost = {
     Starwars_Meme: 1000000
@@ -42,12 +42,15 @@ var powerUpOwned = {
     Starwars_Meme: 0
     , Almond_Activator: 0
 };
-multiplier = 1;
+multiplier = 100000;
 amount = checkCookie('amount');
 totalPixels = checkCookie('pixels');
 var ownedString = getCookie('owned');
+console.log("ownedString: " + ownedString);
 if (ownedString != "") {
     owned = JSON.parse(ownedString);
+    console.log("Loaded from cookie");
+    console.log(owned[7]);
     var x = workers.length;
     while (x > 0) {
         x = x - 1;
@@ -58,9 +61,10 @@ if (ownedString != "") {
             owned[worker] = 0;
         }
     }
-    loadOwned();
+    setTimeout(loadOwned, 1000);
 }
 console.log(totalPixels);
+sendScore();
 
 function timer() {
     totalPixels = totalPixels + (amount * multiplier / 100);
@@ -112,11 +116,14 @@ function buttonColor() {
 
 function loadOwned() {
     var x = workers.length;
+    console.log(x);
     while (x > 0) {
         x = x - 1;
-        worker = workers[x];
-        var id = worker + "Own";
-        console.log("loadOwnded: " + worker);
-        document.getElementById(id).innerHTML = owned[worker];
+        var workerSelect = workers[x];
+        var id = workerSelect + "Own";
+        console.log("id is:" + id);
+        console.log("worker selected is: " + owned[workerSelect]);
+        console.log("loadOwned: " + workerSelect);
+        document.getElementById(id).innerHTML = owned[workerSelect];
     }
 }
