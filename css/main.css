@@ -9,3 +9,7 @@ body {
     background-attachment: fixed;
     margin-bottom: 30px;
 }
+
+.row {
+    margin-bottom: 10px;
+}
