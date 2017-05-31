@@ -15,7 +15,7 @@ var owned = {
     , LuminousKnight: 0
     , Fluffyn: 0
     , Llama_taco: 0
-}
+};
 var cost = {
     CreativeSushi: 1000000
     , sam: 2500
@@ -29,7 +29,19 @@ var cost = {
     , LuminousKnight: 100
     , Fluffyn: 250000
     , Llama_taco: 750000
-}
+};
+var powerUpCost = {
+    Starwars_Meme: 1000000
+    , Almond_Activator: 2000000
+};
+var powerUpMultiplier = {
+    Starwars_Meme: 1
+    , Almond_Activator: 3
+};
+var powerUpOwned = {
+    Starwars_Meme: 0
+    , Almond_Activator: 0
+};
 multiplier = 1;
 amount = checkCookie('amount');
 totalPixels = checkCookie('pixels');
@@ -40,11 +52,9 @@ if (ownedString != "") {
     while (x > 0) {
         x = x - 1;
         worker = workers[x];
-        console.log(worker);
         checkObj = owned[worker];
-        console.log(checkObj);
         if (checkObj === undefined) {
-            console.log("consider it undefined")
+            console.log("consider it undefined");
             owned[worker] = 0;
         }
     }
@@ -103,10 +113,10 @@ function buttonColor() {
 function loadOwned() {
     var x = workers.length;
     while (x > 0) {
+        x = x - 1;
         worker = workers[x];
         var id = worker + "Own";
-        console.log(worker);
+        console.log("loadOwnded: " + worker);
         document.getElementById(id).innerHTML = owned[worker];
-        x = x - 1;
     }
 }

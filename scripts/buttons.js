@@ -17,3 +17,16 @@ function buyItem(item, itemCost, itemAmount) {
         updateOwnedGUI(item);
     }
 }
+
+function buyPowerUp(item) {
+    var itemCost = powerUpCost[item];
+    if (itemCost > totalPixels) {
+        console.log("Buy failed. Insufficiant Funds");
+    }
+    else {
+        multiplier = multiplier + powerUpMultiplier[item];
+        totalPixels = totalPixels - itemCost;
+        powerUpOwned[item] = powerUpOwned[item] + 1;
+        updateOwnedGUI(item);
+    }
+}
