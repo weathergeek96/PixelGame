@@ -42,7 +42,7 @@ var powerUpOwned = {
     Starwars_Meme: 0
     , Almond_Activator: 0
 };
-multiplier = 100000;
+multiplier = 1;
 amount = checkCookie('amount');
 totalPixels = checkCookie('pixels');
 var ownedString = getCookie('owned');
