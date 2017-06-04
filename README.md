@@ -10,4 +10,3 @@ TODO:
 -Add changing item price
 -Add Powerups
 -Change the current item buying system to the same as the  powerup buying system
--!!!!! FIX LOADING OWNED; loadOwned()
