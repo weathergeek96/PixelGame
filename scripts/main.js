@@ -3,7 +3,7 @@ timerVar = setInterval(timer, 10);
 setInterval(sendUserData, 60000);
 setTimeout(sendUserData, 2000);
 var multiplier, amount, totalPixels;
-var workers = ["CreativeSushi", "sam", "StarLord", "WeatherGeek", "Benji", "MM4005", "Scruffy", "Sarah.Oswin", "Shearsquid", "LuminousKnight", "Fluffyn", "Llamataco"];
+var workers = ["CreativeSushi", "sam", "StarLord", "WeatherGeek", "Benji", "MM4005", "Scruffy", "Sarah.Oswin", "Shearsquid", "LuminousKnight", "Fluffyn", "Llamataco", "Garbagefield"];
 var owned = {
     CreativeSushi: 0
     , sam: 0
@@ -17,6 +17,7 @@ var owned = {
     , LuminousKnight: 0
     , Fluffyn: 0
     , Llamataco: 0
+    , Garbagefield: 0
 };
 var cost = {
     CreativeSushi: 1000000
@@ -31,6 +32,7 @@ var cost = {
     , LuminousKnight: 100
     , Fluffyn: 250000
     , Llamataco: 750000
+    , Garbagefield: 10000
 };
 var powerUpCost = {
     Starwars_Meme: 1000000
