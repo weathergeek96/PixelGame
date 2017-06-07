@@ -13,6 +13,7 @@
     <script src="scripts/api.js"></script>
     <script src="scripts/login.js"></script>
     <script src="scripts/buttons.js"></script>
+    <script src="scripts/loadGame.js"></script>
     <script src="scripts/updateGUI.js"></script>
     <script src="scripts/main.js"></script>
 </head>
@@ -35,14 +36,14 @@
             <h1>Workers</h1></div>
         <div class="row">
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="sam" onclick="buyItem('sam', 2500, 50)">Buy Scteam</button>
+                <button type="button" class="btn btn-success" id="sam" onclick="buyItem('sam')">Buy Scteam</button>
                 <br> Cost: 2500 Pixels
                 <br> Own:
                 <text id="samOwn">0</text>
             </div>
-            <div class="col-sm-4">Sam is the one you can always count on to post randomness. With Sam you will gain 50 pixels per second!</div>
+            <div class="col-sm-4">Sam is the one you can always count on to post randomness. With Sam you will gain 25 pixels per second!</div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="CreativeSushi" onclick="buyItem('CreativeSushi', 1000000, 10000)">Buy Creative Sushi</button>
+                <button type="button" class="btn btn-success" id="CreativeSushi" onclick="buyItem('CreativeSushi')">Buy Creative Sushi</button>
                 <br> Cost: 1,000,000 Pixels
                 <br> Own:
                 <text id="CreativeSushiOwn">0</text>
@@ -51,15 +52,15 @@
         </div>
         <div class="row">
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="WeatherGeek" onclick="buyItem('WeatherGeek', 500000, 5000)">Buy WeatherGeek</button>
+                <button type="button" class="btn btn-success" id="WeatherGeek" onclick="buyItem('WeatherGeek')">Buy WeatherGeek</button>
                 <br> Cost: 500,000 Pixels
                 <br> Own:
                 <text id="WeatherGeekOwn">0</text>
             </div>
             <div class="col-sm-4">WeatherGeek is Nathans right hand man. He is pretty sweet and made this game for everyone. With Him, you will gain 5000 pixels per second.</div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="StarLord" onclick="buyItem('StarLord', 25, 1)">Buy StarLord</button>
-                <br> Cost: 25 Pixels
+                <button type="button" class="btn btn-success" id="StarLord" onclick="buyItem('StarLord')">Buy StarLord</button>
+                <br> Cost: 100 Pixels
                 <br> Own:
                 <text id="StarLordOwn">0</text>
             </div>
@@ -67,30 +68,30 @@
         </div>
         <div class="row">
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="Benji" onclick="buyItem('Benji', 100000, 1000)">Buy Benji</button>
+                <button type="button" class="btn btn-success" id="Benji" onclick="buyItem('Benji')">Buy Benji</button>
                 <br> Cost: 100,000 Pixels
                 <br> Own:
                 <text id="BenjiOwn">0</text>
             </div>
             <div class="col-sm-4">He's just Benji. He generates 1000 pixels a second. Chicken Alfredo.</div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="MM4005" onclick="buyItem('MM4005', 1000, 25)">Buy MM4005</button>
+                <button type="button" class="btn btn-success" id="MM4005" onclick="buyItem('MM4005')">Buy MM4005</button>
                 <br> Cost: 1,000 Pixels
                 <br> Own:
                 <text id="MM4005Own">0</text>
             </div>
-            <div class="col-sm-4">MM4005 has contributed to the group time and time again. Though, he seems to dissapear for months on end, and then randomly reappear like nothing has happened. Strange. He will gain 25 pixels per second.</div>
+            <div class="col-sm-4">MM4005 has contributed to the group time and time again. Though, he seems to dissapear for months on end, and then randomly reappear like nothing has happened. Strange. He will gain 10 pixels per second.</div>
         </div>
         <div class="row">
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="Scruffy" onclick="buyItem('Scruffy', 10000000, 100000)">Buy Scruffy</button>
+                <button type="button" class="btn btn-success" id="Scruffy" onclick="buyItem('Scruffy')">Buy Scruffy</button>
                 <br> Cost: 10,000,000 Pixels
                 <br> Own:
                 <text id="ScruffyOwn">0</text>
             </div>
             <div class="col-sm-4">Scruffy never posts in the chat. Most people doesn't even know he is Pixel. The main reason we keep him in the chat is because he makes amazing videos. When he does chat, he is really cool. like really cool. Scruffy earns 100,000 pixels per second.</div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="Sarah.Oswin" onclick="buyItem('Sarah.Oswin', 25000, 250)">Buy Sarah.Oswin</button>
+                <button type="button" class="btn btn-success" id="Sarah.Oswin" onclick="buyItem('Sarah.Oswin')">Buy Sarah.Oswin</button>
                 <br> Cost: 25,000 Pixels
                 <br> Own:
                 <text id="Sarah.OswinOwn">0</text>
@@ -99,15 +100,15 @@
         </div>
         <div class="row">
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="Shearsquid" onclick="buyItem('Shearsquid', 50000, 500)">Buy Shearsquid</button>
+                <button type="button" class="btn btn-success" id="Shearsquid" onclick="buyItem('Shearsquid')">Buy Shearsquid</button>
                 <br> Cost: 50,000 Pixels
                 <br> Own:
                 <text id="ShearsquidOwn">0</text>
             </div>
             <div class="col-sm-4">Shearsquid is pretty cool. He lives in the second biggest pocket of Pixelers. He kinda runs his own crew there. He makes 500 pixels per second.</div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="LuminousKnight" onclick="buyItem('LuminousKnight', 100, 5)">Buy LuminousKnight</button>
-                <br> Cost: 100 Pixels
+                <button type="button" class="btn btn-success" id="LuminousKnight" onclick="buyItem('LuminousKnight')">Buy LuminousKnight</button>
+                <br> Cost: 500 Pixels
                 <br> Own:
                 <text id="LuminousKnightOwn">0</text>
             </div>
@@ -115,14 +116,14 @@
         </div>
         <div class="row">
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="Fluffyn" onclick="buyItem('Fluffyn', 250000, 2500)">Buy Fluffyn</button>
+                <button type="button" class="btn btn-success" id="Fluffyn" onclick="buyItem('Fluffyn')">Buy Fluffyn</button>
                 <br> Cost: 250,000 Pixels
                 <br> Own:
                 <text id="FluffynOwn">0</text>
             </div>
             <div class="col-sm-4">Fluffyn is really cool. He has a pikman car. True story. He earns 2,500 pixels per second.</div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="Llamataco" onclick="buyItem('Llamataco', 750000, 7500)">Buy Llama_taco</button>
+                <button type="button" class="btn btn-success" id="Llamataco" onclick="buyItem('Llamataco')">Buy Llama_taco</button>
                 <br> Cost: 750,000 Pixels
                 <br> Own:
                 <text id="LlamatacoOwn">0</text>
@@ -131,7 +132,7 @@
         </div>
         <div class="row">
             <div class="col-sm-2">
-                <button type="button" class="btn btn-success" id="Garbagefield" onclick="buyItem('Garbagefield', 10000, 100)">Buy Garbagefield</button>
+                <button type="button" class="btn btn-success" id="Garbagefield" onclick="buyItem('Garbagefield')">Buy Garbagefield</button>
                 <br> Cost: 10,000 Pixels
                 <br> Own:
                 <text id="GarbagefieldOwn">0</text>

@@ -4,8 +4,10 @@ function PIXELATOR() {
     console.log("PIXELATOR!!!");
 }
 
-function buyItem(item, itemCost, itemAmount) {
-    console.log("buyFunctions")
+function buyItem(item) {
+    var itemCost = cost[item];
+    var itemAmount = itemAmountObj[item];
+    console.log("buyItem var itemCost: " + itemCost);
     if (itemCost > totalPixels) {
         document.getElementById(item).className = "btn btn-danger";
         console.log("Buy failed. Insufficiant Funds");

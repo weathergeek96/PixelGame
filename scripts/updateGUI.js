@@ -28,3 +28,27 @@ function updateHighscoreGUI(rawData) {
     }
     document.getElementById("scores").innerHTML = text;
 }
+
+function buttonColor() {
+    var x = workers.length;
+    while (x > 0) {
+        x = x - 1;
+        worker = workers[x];
+        if (cost[worker] > totalPixels) {
+            document.getElementById(worker).className = "btn btn-danger";
+        }
+        else {
+            document.getElementById(worker).className = "btn btn-success";
+        }
+    }
+}
+
+function loadOwned() {
+    var x = workers.length;
+    while (x > 0) {
+        x = x - 1;
+        var workerSelect = workers[x];
+        var id = workerSelect + "Own";
+        document.getElementById(id).innerHTML = owned[workerSelect];
+    }
+}
