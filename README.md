@@ -4,9 +4,12 @@ The pixel game is created by WeatherGeek for the Pixel4x29 community for a fun g
 
 TODO:
 -Add Buy in Bulk
--Add Leaderboard
-----Add API
 -Organize from Least to Highest expensive.
 -Add changing item price
--Add Powerups
--Change the current item buying system to the same as the  powerup buying system
+-Add Powerups        //Partially done. Needs testing
+-!!!!Secure user authentication
+-Work on UI
+-Stock market
+-Sell people back
+-Buy fun stuff
+-Pixels die
