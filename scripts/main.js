@@ -1,4 +1,6 @@
 console.log("main loaded");
+//Check for currently logged in user
+checkLoginCookie();
 // Timer
 timerVar = setInterval(timer, 10);
 //Update DataBase
@@ -8,8 +10,6 @@ setTimeout(sendUserData, 2000);
 setTimeout(updateHighscoreGUI, 2000);
 //load game info from cookies
 loadGame();
-//Check for currently logged in user
-checkLoginCookie();
 
 function timer() {
     totalPixels = totalPixels + (amount * multiplier / 100);
