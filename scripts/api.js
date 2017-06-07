@@ -3,14 +3,21 @@ console.log("api.js loaded");
 function getScore() {
     var response;
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            response = this.responseText;
-            updateHighscoreGUI(response);
-        }
-    };
-    xhttp.open("GET", "http://simplegenius.pro/pixelgame/api.php/users", true);
+    xhttp.open("GET", "http://simplegenius.pro/pixelgame/api.php/users", false);
     xhttp.send();
+    return xhttp.responseText;
+}
+
+function getUserData(data) {
+    var user = getCookie("username");
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://simplegenius.pro/pixelgame/api.php/users?filter=username,eq," + user, false);
+    xhttp.send();
+    var response = xhttp.responseText;
+    var json = JSON.parse(response);
+    var parsed = json.users.records;
+    var sendResponse = parsed[0];
+    return sendResponse[data];
 }
 
 function getLogins() {

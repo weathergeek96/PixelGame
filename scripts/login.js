@@ -67,4 +67,3 @@ function createUser(username) {
         setCookie("password", pass);
     }
 }
-checkLoginCookie();

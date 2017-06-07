@@ -1,12 +1,13 @@
 console.log("Loaded loadGame.js");
 
 function loadGame() { //load game info from cookies
-    multiplier = getCookie('multplier');
+    multiplier = getUserData(6);
+    amount = getUserData(4);
+    totalPixels = getUserData(3);
     if (multiplier === "") {
         multiplier = 1;
     }
-    amount = checkCookie('amount');
-    totalPixels = checkCookie('pixels');
+    //load owned
     var ownedString = getCookie('owned');
     if (ownedString != "") {
         owned = JSON.parse(ownedString);

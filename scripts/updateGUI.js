@@ -15,9 +15,12 @@ function updateOwnedGUI(item) {
     document.getElementById(id).innerHTML = owned[item];
 }
 
-function updateHighscoreGUI(rawData) {
+function updateHighscoreGUI() {
+    var rawData = getScore();
     var json = JSON.parse(rawData);
+    console.log(json);
     var scoreArray = json.users.records;
+    console.log(scoreArray);
     var sArrayLen = scoreArray.length;
     var x = 0;
     var text = "<h4>Player - Score</h4> <br>";
