@@ -8,7 +8,7 @@ function loadGame() { //load game info from cookies
         multiplier = 1;
     }
     //load owned
-    var ownedString = getCookie('owned');
+    var ownedString = getUserData(5);
     if (ownedString != "") {
         owned = JSON.parse(ownedString);
         console.log("Loaded from cookie");
