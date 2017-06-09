@@ -16,12 +16,16 @@
     <script src="scripts/loadGame.js"></script>
     <script src="scripts/updateGUI.js"></script>
     <script src="scripts/objects.js"></script>
+    <script src="scripts/googleAuth.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="scripts/main.js"></script>
-</head>
+    <meta name="google-signin-client_id" content="55841529707-aku2ogk5515c19dutb4ii11tgrg6s8iv.apps.googleusercontent.com"> </head>
 
 <body>
     <div class="row text-center"> <img class="img-responsive" src="images/logo.png" id="logo" alt="Pixel 4x29"></div>
     <div class="container">
+        <div class="row">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div> <a href="#" onclick="signOut();">Sign out</a> </div>
         <div class="row">
             <div class="col-sm-2">Total Pixels:</div>
             <div class="col-sm-2" id="pixels"></div>
