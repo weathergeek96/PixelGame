@@ -18,7 +18,7 @@ function signOut() {
 function sendGoogleAPI(id_token) {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'http://simplegenius.pro/pixelgame/login.php');
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    //xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function () {
         console.log('Signed in as: ' + xhr.responseText);
     };
