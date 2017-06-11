@@ -1,5 +1,7 @@
 function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();
+    var id_token = googleUser.getAuthResponse().id_token;
+    sendGoogleAPI(id_token);
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
@@ -11,4 +13,14 @@ function signOut() {
     auth2.signOut().then(function () {
         console.log('User signed out.');
     });
+}
+
+function sendGoogleAPI(id_token) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://simplegenius.pro/pixelgame/login.php');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+        console.log('Signed in as: ' + xhr.responseText);
+    };
+    xhr.send('idtoken=' + id_token);
 }
